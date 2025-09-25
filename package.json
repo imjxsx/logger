@@ -1,0 +1,21 @@
+{
+  "name": "logger",
+  "description": "A lightweight and customizable Logger for Node.js applications.",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
+  "author": "imjxsx",
+  "packageManager": "pnpm@10.17.0",
+  "devDependencies": {
+    "@types/node": "20.0.0",
+    "tsx": "4.20.5",
+    "typescript": "5.9.2"
+  },
+  "dependencies": {
+    "colors": "github:imjxsx/colors"
+  },
+  "scripts": {
+    "build": "tsc"
+  }
+}
