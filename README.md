@@ -1,4 +1,4 @@
-<h1 align="center">📝 logger (v1.0.1)</h1>
+<h1 align="center">📝 logger (v1.0.0)</h1>
 <p align="center">A lightweight and customizable Logger for Node.js applications.</p>
 <p align="center">Supports <b>multiple log levels</b>, <b>colorized output</b>, <b>JSON logging</b>, and <b>child loggers</b>.</p>
 
