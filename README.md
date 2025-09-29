@@ -1,82 +1,46 @@
-<h1 align="center">📝 logger (v1.0.0)</h1>
-<p align="center">A lightweight and customizable Logger for Node.js applications.</p>
-<p align="center">Supports <b>multiple log levels</b>, <b>colorized output</b>, <b>JSON logging</b>, and <b>child loggers</b>.</p>
+# 📝 @imjxsx/logger (v1.0.2)
 
-<h2>📥 Install</h2>
-<h3>- PNPM</h3>
+## A lightweight and customizable Logger for Node.js applications
 
-```bash
-pnpm add github:imjxsx/logger
-```
-<h3>- NPM</h3>
+### 📥 Installation
+
+---
+
+#### - With NPM
 
 ```bash
-npm install github:imjxsx/logger
+npm install @imjxsx/logger
 ```
-<h3>- YARN</h3>
+
+#### - With PNPM
 
 ```bash
-yarn add github:imjxsx/logger
+pnpm add @imjxsx/logger
 ```
 
-<h2>🚀 Usage</h2>
-<h3>- With color</h3>
+#### - With YARN
 
-```ts
+```bash
+yarn add @imjxsx/logger
+```
+
+---
+
+### 🚀 Example of Use
+
+```javascript
+// index.js
 import Logger from "logger";
 
 const logger = new Logger({
   name: "App",
-  level: "TRACE",
+  level: "INFO",
   colorize: true,
 });
-
-logger.fatal("Fatal error!");
-
-// Example output:
-// [2025-09-25T20:21:00.197Z] [App] [FATAL] Fatal error!
-// Obviously with color HAHA
+logger.fatal("Fatal error!"); // [2025-09-25T20:21:00.197Z] [App] [FATAL] Fatal error!
+logger.info("Server listening on port \"5000\"."); // [2025-09-25T20:21:00.197Z] [App] [INFO] Server listening on port "5000".
 ```
 
-<h3>- Colorless</h3>
+---
 
-```ts
-import Logger from "logger";
-
-const logger = new Logger({
-  name: "App",
-  level: "TRACE",
-  colorize: false,
-});
-
-logger.fatal("Fatal error!");
-
-// Example output:
-// [2025-09-25T20:21:00.197Z] [App] [FATAL] Fatal error!
-```
-
-<h3>- JSON format</h3>
-
-```ts
-import Logger from "logger";
-
-const logger = new Logger({
-  name: "App",
-  level: "TRACE",
-  json: true,
-});
-
-logger.fatal("Fatal error!");
-
-// Example output:
-// {"timestamp":"2025-09-25T20:21:00.197Z","level":"FATAL","name":"App","message":"Fatal error!","pid":5254,"hostname":"penguin"}
-```
-
-<h2>🔷 Features</h2>
-<ul>
-  <li>Multiple log levels: <code>"FATAL"</code>, <code>"ERROR"</code>, <code>"WARN"</code>, <code>"INFO"</code>, <code>"DEBUG"</code>, <code>"TRACE"</code>.</li>
-  <li>Optional colorized output with ANSI escape codes.</li>
-  <li>Optional JSON output with metadata: timestamp, process ID, hostname.</li>
-  <li>Child loggers inherit configuration from parent logger.</li>
-  <li>Supports logging of strings, numbers, booleans, objects, arrays, dates, and errors.</li>
-</ul>
+Developed with **❤** by **[imjxsx](https://github.com/imjxsx)**

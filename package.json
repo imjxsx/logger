@@ -1,21 +1,42 @@
 {
-  "name": "logger",
-  "description": "A lightweight and customizable Logger for Node.js applications.",
-  "version": "1.0.0",
+  "name": "@imjxsx/logger",
+  "version": "1.0.2",
+  "description": "A lightweight and customizable Logger for Node.js applications",
   "type": "module",
   "main": "build/index.js",
   "types": "build/index.d.ts",
+  "files": [
+    "build",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "publish": "pnpm run build && npm publish --access public"
+  },
+  "keywords": [
+    "logging",
+    "log",
+    "javascript",
+    "typescript",
+    "nodejs",
+    "logger"
+  ],
   "author": "imjxsx",
-  "packageManager": "pnpm@10.17.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/imjxsx/logger.git"
+  },
+  "bugs": {
+    "url": "https://github.com/imjxsx/logger/issues"
+  },
+  "homepage": "https://github.com/imjxsx/logger#readme",
+  "packageManager": "pnpm@10.17.1",
   "devDependencies": {
     "@types/node": "20.0.0",
-    "tsx": "4.20.5",
+    "tsx": "4.20.6",
     "typescript": "5.9.2"
   },
   "dependencies": {
-    "colors": "github:imjxsx/colors"
-  },
-  "scripts": {
-    "build": "tsc"
+    "@imjxsx/colors": "1.0.3"
   }
 }
