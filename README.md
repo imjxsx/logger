@@ -1,4 +1,4 @@
-# 📝 @imjxsx/logger (v1.0.2)
+# 📝 @imjxsx/logger (v1.0.3)
 
 ## A lightweight and customizable Logger for Node.js applications
 
@@ -30,7 +30,7 @@ yarn add @imjxsx/logger
 
 ```javascript
 // index.js
-import Logger from "logger";
+import Logger from "@imjxsx/logger";
 
 const logger = new Logger({
   name: "App",

@@ -1,6 +1,6 @@
 {
   "name": "@imjxsx/logger",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A lightweight and customizable Logger for Node.js applications",
   "type": "module",
   "main": "build/index.js",
@@ -10,8 +10,7 @@
     "README.md"
   ],
   "scripts": {
-    "build": "tsc",
-    "publish": "pnpm run build && npm publish --access public"
+    "build": "tsc"
   },
   "keywords": [
     "logging",
