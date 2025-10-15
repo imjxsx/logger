@@ -1,6 +1,6 @@
-# 📝 @imjxsx/logger (v1.0.3)
+# 📝 @imjxsx/logger (v1.1.0)
 
-## A lightweight and customizable Logger for Node.js applications
+## A lightweight and customizable logger for Node.js applications
 
 ### 📥 Installation
 
@@ -30,15 +30,47 @@ yarn add @imjxsx/logger
 
 ```javascript
 // index.js
-import Logger from "@imjxsx/logger";
+import axios from "axios";
+import Logger from "@imjxsx/logger"; // or import { Logger } from "@imjxsx/logger";
 
-const logger = new Logger({
-  name: "App",
-  level: "INFO",
+let logger = new Logger({
+  name: "COLORIZED LOGGER",
   colorize: true,
 });
-logger.fatal("Fatal error!"); // [2025-09-25T20:21:00.197Z] [App] [FATAL] Fatal error!
-logger.info("Server listening on port \"5000\"."); // [2025-09-25T20:21:00.197Z] [App] [INFO] Server listening on port "5000".
+logger.error("An unexpected error occurred");
+
+logger = new Logger({
+  name: "JSON LOGGER",
+  json: true,
+});
+logger.info({
+  iq: "new:user",
+  data: [
+    {
+      name: "I'm Jxsx",
+      email: "imjxsx@github.com",
+      password: "*************",
+      age: "17",
+      country: "PY",
+    },
+  ],
+});
+
+logger = new Logger({
+  name: "COLORLESS LOGGER",
+  colorize: false,
+});
+logger.error("An unexpected error occurred");
+
+logger = new Logger({
+  name: "HOOK LOGGER",
+  async send(log) {
+    if (log.level === "ERROR") {
+      await axios.post("https://your.domain.com/api/report/error", log);
+    }
+  },
+});
+logger.error("Error: This is an error");
 ```
 
 ---
