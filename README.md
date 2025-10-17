@@ -1,4 +1,4 @@
-# 📝 @imjxsx/logger (v1.1.0)
+# 📝 @imjxsx/logger (v1.1.1)
 
 ## A lightweight and customizable logger for Node.js applications
 
